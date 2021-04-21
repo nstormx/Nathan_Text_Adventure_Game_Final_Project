@@ -1,0 +1,20 @@
+#To Do List
+
+#Flow Chart of how I want the game to run and also this is how I'm going to create my project.
+First you input what you want your character name to be, then you pick what you want your class to be (Warrior, Mage, Rogue) 
+
+Next you start going through the dungeon by choosing which way you want to go. The way you do this is by saying left right or forward depending on the room your in.
+
+For the battles there will be about 3 different attack options the player can choose from and then the enemy will attack.
+
+In the rooms without enemies there will be a few different choices like, search a chest, find a portal and other random things.
+
+After the user goes through the various rooms without ending it early, they will come to the final boss and then a battle will ensue. After winning the user will complete the game.
+
+#My plan of action in creating the game.
+First I will create the inital start code of creating a name and picking a class, then I will create each of the classes.
+After that I will create a few enemies so I can test fighting, cause I feel like that might be one of the harder parts.
+Then I will start building the rooms, I'm going for atleast 6 but I might add more depending on how the whole thing comes together.
+After that I will start working on how the movement will be and start connecting the rooms together. To make this easier I will most likely make a flow chart or map to jot
+all the rooms down.
+If i get done earlier then expected I will most likely try to add more rooms or even create text art to give more life to the game.
