@@ -1,0 +1,213 @@
+#Nathan Christensen-Padilla
+#Final Project
+#Text Adventure Game - The Grand Zyelow Dungeon.
+#In this game you input your name and the class you wish to be from a list of choices,
+#then you go through the dungeon until you reach the end, or run into something that
+#end's your journey early.
+
+
+#Rooms of the Dungeon
+
+def startroom():
+    print("Start Room")
+
+    print("You take a moment to gather yourself before diving head first into")
+    print("the dungeon, as you enter you feel a bit of uneasiness in the air.")
+    print("Almost as if there's something sinister hiding in here.")
+    room1("Cleared: ")
+
+
+def room1(roomclear):
+    print("\nRoom 1")
+
+    if "r1." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r1."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward or Left.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room4(roomclear)
+        elif path == "left":
+            room2(roomclear)
+        else:
+            print("Invalid input.")
+
+def room2(roomclear):
+    print("\nRoom 2")
+
+    if "r2." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r2."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward, Left or Right.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room5(roomclear)
+        elif path == "left":
+            room3(roomclear)
+        elif path == "right":
+            room1(roomclear)
+        else:
+            print("Invalid input.")
+
+def room3(roomclear):
+    print("\nRoom 3")
+
+    if "r3." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r3."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward or Right.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room6(roomclear)
+        elif path == "right":
+            room2(roomclear)
+        else:
+            print("Invalid input.")
+
+def room4(roomclear):
+    print("\nRoom 4")
+
+    if "r4." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r4."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward, Back or Left.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room7(roomclear)
+        elif path == "back":
+            room1(roomclear)
+        elif path == "left":
+            room5(roomclear)
+        else:
+            print("Invalid input.")
+
+def room5(roomclear):
+    print("\nRoom 5")
+
+    if "r5." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r5."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward, Back, Left or Right.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room8()
+        elif path == "back":
+            room2(roomclear)
+        elif path == "left":
+            room6(roomclear)
+        elif path == "right":
+            room4(roomclear)
+        else:
+            print("Invalid input.")
+
+def room6(roomclear):
+    print("\nRoom 6")
+
+    if "r6." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r6."
+
+    while True:
+        path = input("Choose which way to go.\n(Forward, Right or Back.)\n")
+        path = path.lower().rstrip()
+        if path == "forward":
+            room9()
+        elif path == "back":
+            room3(roomclear)
+        elif path == "right":
+            room5(roomclear)
+        else:
+            print("Invalid input.")
+
+def room7(roomclear):
+    print("\nRoom 7")
+
+    if "r7." in roomclear:
+        print("You have already cleared this room.")
+    else:
+        roomclear = roomclear + "r7."
+
+    print(roomclear)
+    while True:
+        path = input("Choose which way to go.\n(Back or Left.)\n")
+        path = path.lower().rstrip()
+        if path == "back":
+            room4(roomclear)
+        elif path == "left":
+            room8()
+        else:
+            print("Invalid input.")
+
+def room8():
+    print("\nRoom 8")
+
+    print("It's time to enter through the giant door and see what lies on the other side.\n")
+    bossroom()
+
+def room9():
+    print("\nRoom 9")
+
+    print("You enter through the mysterious door and get teleported out of the dungeon unable")
+    print("to remember anything about where it's located. You decide return home.")
+    room9end()
+
+def bossroom():
+    print("\nBossroom")
+
+    print("The boss has been slain!")
+    bossend()
+
+
+
+#Ending's
+def bossend():
+    print("\nEnding words and stuff.")
+    input("Press enter to close the program.")
+    exit()
+
+def room9end():
+    print("\nEnding words and stuff.")
+    input("Press enter to close the program.")
+    exit()
+
+
+#Start of the program
+abilities = dict()
+
+name = input("Enter your character name.\n")
+
+while True:
+    classpick = input("Pick your class, Warrior, Rogue or Mage.\n")
+    classpick = classpick.lower().rstrip()
+    if classpick == 'warrior':
+        abilities = {"1":"Slash", "2":"Shield Bash", "3":"Whirlwind"}
+        print(abilities,"\n")
+        break
+    elif classpick == 'rogue':
+        abilities = {"1":"Shadow Strike", "2":"Dagger Throw", "3":"Backstab"}
+        print(abilities,"\n")
+        break
+    elif classpick == 'mage':
+        abilities = {"1":"Fire Bolt", "2":"Electric Shock", "3":"Wind Slash"}
+        print(abilities,"\n")
+        break
+    else:
+        print("Invalid input, please enter a class name.")
+
+startroom()
