@@ -5,6 +5,7 @@
 #then you go through the dungeon until you reach the end, or run into something that
 #end's your journey early.
 
+import random
 
 #Rooms of the Dungeon
 
@@ -33,7 +34,7 @@ def room1(roomclear):
         elif path == "left":
             room2(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room2(roomclear):
     print("\nRoom 2")
@@ -53,7 +54,7 @@ def room2(roomclear):
         elif path == "right":
             room1(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room3(roomclear):
     print("\nRoom 3")
@@ -71,7 +72,7 @@ def room3(roomclear):
         elif path == "right":
             room2(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room4(roomclear):
     print("\nRoom 4")
@@ -91,7 +92,7 @@ def room4(roomclear):
         elif path == "left":
             room5(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room5(roomclear):
     print("\nRoom 5")
@@ -113,7 +114,7 @@ def room5(roomclear):
         elif path == "right":
             room4(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room6(roomclear):
     print("\nRoom 6")
@@ -133,7 +134,7 @@ def room6(roomclear):
         elif path == "right":
             room5(roomclear)
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room7(roomclear):
     print("\nRoom 7")
@@ -152,7 +153,7 @@ def room7(roomclear):
         elif path == "left":
             room8()
         else:
-            print("Invalid input.")
+            print("Invalid input.\n")
 
 def room8():
     print("\nRoom 8")
@@ -164,7 +165,7 @@ def room9():
     print("\nRoom 9")
 
     print("You enter through the mysterious door and get teleported out of the dungeon unable")
-    print("to remember anything about where it's located. You decide return home.")
+    print("to remember anything about where it's located. You decide to return home.")
     room9end()
 
 def bossroom():
@@ -208,6 +209,7 @@ while True:
         print(abilities,"\n")
         break
     else:
-        print("Invalid input, please enter a class name.")
+        print("Invalid input, please enter a class name.\n")
 
 startroom()
+
