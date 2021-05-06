@@ -18,16 +18,17 @@ def startroom(abilities, hp):
 
 
 def room1(roomclear, abilities, hp):
-    print("\nAs you walk down the staircase you notice that the torches inside")
-    print("the dungeon are all lit up, it's a little weird, but you keep walking")
-    print("until you enter a giant room. The room has cobwebs all over, and skeletons")
-    print("of unknown orgin are lying about, as you enter the middle of the room,")
-    print("You see two doors one on your left and another infront of you.\n")
 
     if "r1." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r1."
+        print("\nAs you walk down the staircase you notice that the torches inside")
+        print("the dungeon are all lit up, it's a little weird, but you keep walking")
+        print("until you enter a giant room. The room has cobwebs all over, and skeletons")
+        print("of unknown orgin are lying about, as you enter the middle of the room,")
+        print("You see two doors one on your left and another infront of you.\n")
+
 
     while True:
         path = input("Choose which way to go.\n(Forward or Left.)\n")
@@ -39,19 +40,22 @@ def room1(roomclear, abilities, hp):
             print("everything is okay.\n")
             room4(roomclear, abilities, hp)
         elif path == "left":
+            print("You decide to enter through the room on the left. As you go")
+            print("through the door you hear some noise.")
             room2(roomclear, abilities, hp)
         else:
             print("Invalid input.\n")
 
 def room2(roomclear, abilities, hp):
-    print("\nRoom 2")
 
     if "r2." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r2."
-
-    hp = fight(abilities,hp)
+        print("As you enter the room a enemy beings to approach you")
+        hp = fight(abilities,hp)
+        print("You catch your breath and look around to see two different doors")
+        print("one to your left and one infront of you.")
 
     while True:
         path = input("Choose which way to go.\n(Forward, Left or Right.)\n")
@@ -66,12 +70,15 @@ def room2(roomclear, abilities, hp):
             print("Invalid input.\n")
 
 def room3(roomclear, abilities, hp):
-    print("\nRoom 3")
 
     if "r3." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r3."
+        print("You enter the room and their is a puzzle in the middle")
+        print("it looks to inolve moving a bunch of pieces around, but")
+        print("as you take a closer look all of the parts are destroyed.")
+        print("You see a door open infront of you.")
 
     while True:
         path = input("Choose which way to go.\n(Forward or Right.)\n")
@@ -84,17 +91,17 @@ def room3(roomclear, abilities, hp):
             print("Invalid input.\n")
 
 def room4(roomclear, abilities, hp):
-    print("\nAs you are looking around, you see a chest off to the side of the room")
-    print("as you approach it you hear something moving in the room infront of you.")
-    print("You decide to just open the chest anyway and inside you find some old")
-    print("parchment paper and a few gold coins. You take all of it and store it in")
-    print("your bag. Afterwards you see that their are two ways to go, torwards")
-    print("the footsteps in front of you, or through the mossy door on your left.\n")
-
     if "r4." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r4."
+        print("\nAs you are looking around, you see a chest off to the side of the room")
+        print("as you approach it you hear something moving in the room infront of you.")
+        print("You decide to just open the chest anyway and inside you find some old")
+        print("parchment paper and a few gold coins. You take all of it and store it in")
+        print("your bag. Afterwards you see that their are two ways to go, torwards")
+        print("the footsteps in front of you, or through the mossy door on your left.\n")
+
 
     while True:
         path = input("Choose which way to go.\n(Forward, Back or Left.)\n")
@@ -111,12 +118,12 @@ def room4(roomclear, abilities, hp):
             print("Invalid input.\n")
 
 def room5(roomclear, abilities, hp):
-    print("\nRoom 5")
 
     if "r5." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r5."
+        print("The room is barren with 3 ways to go, left right and forward.")
 
     while True:
         path = input("Choose which way to go.\n(Forward, Back, Left or Right.)\n")
@@ -133,15 +140,15 @@ def room5(roomclear, abilities, hp):
             print("Invalid input.\n")
 
 def room6(roomclear, abilities, hp):
-    print("\nRoom 6")
 
     if "r6." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r6."
-
-    hp = fight(abilities,hp)
-
+        print("You enter the room and and enemy attacks you.")
+        hp = fight(abilities,hp)
+        print("After catching your breath, you see two paths one to your right")
+        print("and one infront of you.")
     while True:
         path = input("Choose which way to go.\n(Forward, Right or Back.)\n")
         path = path.lower().rstrip()
@@ -155,21 +162,19 @@ def room6(roomclear, abilities, hp):
             print("Invalid input.\n")
 
 def room7(roomclear, abilities, hp):
-    print("\nRoom 7")
 
     if "r7." in roomclear:
         print("You have already cleared this room.")
     else:
         roomclear = roomclear + "r7."
+        print("The door creaks as you open it and you step into the room, a few seconds")
+        print("later you hear something in the back right of the room. As you start to")
+        print("turn you notice that it's an enemy.\n")
+        hp = fight(abilities,hp)
 
-    print("The door creaks as you open it and you step into the room, a few seconds")
-    print("later you hear something in the back right of the room. As you start to")
-    print("turn you notice that it's an enemy.\n")
-    hp = fight(abilities,hp)
-
-    print("After the tough battle you get barrings and look around the room to see where")
-    print("you want to go next. As you look around you only see a door to your left")
-    print("and nothing else of value in the room.\n")
+        print("After the tough battle you get barrings and look around the room to see where")
+        print("you want to go next. As you look around you only see a door to your left")
+        print("and nothing else of value in the room.\n")
 
     while True:
         path = input("Choose which way to go.\n(Back or Left.)\n")
@@ -196,11 +201,9 @@ def room8(abilities, hp):
     bossroom(abilities, hp)
 
 def room9():
-    print("\nRoom 9")
-
     print("You enter through the mysterious door and get teleported out of the dungeon unable")
     print("to remember anything about where it's located. You decide to return home.")
-    room9end()
+    exit()
 
 def bossroom(abilities, hp):
     print("\nAs you enter through the door you hear loud foot steps in the back")
@@ -215,7 +218,7 @@ def bossroom(abilities, hp):
 
 
 
-#Ending's
+#Ending
 def bossend():
     print("\nYou have slain the evil boss Gil-Snax, and claimed all of the gold")
     print("and goodies lying in his room. You make your way back through the")
@@ -226,10 +229,6 @@ def bossend():
     input("Press enter to close the program.")
     exit()
 
-def room9end():
-    print("\nEnding words and stuff.")
-    input("Press enter to close the program.")
-    exit()
 
 
 #Fighting
